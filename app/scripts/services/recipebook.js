@@ -1,18 +1,20 @@
 'use strict';
 
 angular.module('tastyApp')
-  .factory('RecipeBook', function () {
-    var recipes = {};
+  .provider('RecipeBook', function() {
+    this.$get = function() {
+        var recipes = {};
 
-    return {
-      all: function() {
-        return recipes;
-      },
-      get: function(name) {
-        return recipes[name];
-      },
-      add: function (recipe) {
-        recipes[recipe.name] = recipe;
-      }
-    };
-  });
+        return {
+          all: function() {
+            return recipes;
+          },
+          get: function(name) {
+            return recipes[name];
+          },
+          add: function (recipe) {
+            recipes[recipe.name] = recipe;
+          }
+        };
+      };
+    });
