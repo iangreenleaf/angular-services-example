@@ -1,8 +1,8 @@
 'use strict'
 
 angular.module('tastyApp')
-  .controller 'MainCtrl', ($scope, RecipeBook, Recipe) ->
-
+  .controller 'MainCtrl', ($scope, version, RecipeBook, Recipe) ->
+    $scope.version = version
     $scope.recipes = RecipeBook.all()
 
     $scope.addRecipe = ->
