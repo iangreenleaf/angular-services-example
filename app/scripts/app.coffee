@@ -1,6 +1,7 @@
 'use strict'
 
 angular.module('tastyApp', [
+  'recipeBook',
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -16,3 +17,6 @@ angular.module('tastyApp', [
         controller: 'RecipeCtrl'
       .otherwise
         redirectTo: '/'
+
+  .config (RecipeBookProvider) ->
+    RecipeBookProvider.useAdjectives(true)
