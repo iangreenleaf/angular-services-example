@@ -18,5 +18,5 @@ angular.module('tastyApp', [
       .otherwise
         redirectTo: '/'
 
-  .config (RecipeBookProvider) ->
-    RecipeBookProvider.useAdjectives(true)
+  .config (RecipeBookProvider, takeLiberties) ->
+    RecipeBookProvider.useAdjectives(takeLiberties)
