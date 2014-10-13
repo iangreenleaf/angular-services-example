@@ -4,33 +4,19 @@
     <li><a ng-href="#">About</a></li>
     <li><a ng-href="#">Contact</a></li>
   </ul>
-  <h3 class="text-muted">angular_example_app</h3>
+  <h1>TastyApp</h1>
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+<div class="row">
+  <form ng-submit="addRecipe()">
+    <input type="text" ng-model="name" name="name" style="width:30em" />
+    <input type="submit" value="Add Recipe" />
+  </form>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
+<div class="row">
+  <h2>Recipes</h2>
+  <ul ng-repeat="recipe in recipes">
+    <li><a href="/#/recipe/{{recipe.name}}">{{recipe.name}}</a></li>
+  </ul>
 </div>

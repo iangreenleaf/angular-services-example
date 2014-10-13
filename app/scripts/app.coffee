@@ -6,10 +6,13 @@ angular.module('tastyApp', [
   'ngSanitize',
   'ngRoute'
 ])
-  .config ($routeProvider) ->
+  .config ($routeProvider, $locationProvider) ->
     $routeProvider
       .when '/',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
+      .when '/recipe/:name',
+        templateUrl: 'views/recipe.html'
+        controller: 'RecipeCtrl'
       .otherwise
         redirectTo: '/'

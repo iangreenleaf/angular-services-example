@@ -1,0 +1,25 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h1>TastyApp</h1>
+</div>
+
+<div class="row">
+  <h1>{{recipe.name}}</h1>
+</div>
+<div class="row">
+  <form ng-submit="addIngredient()">
+    <input type="number" ng-model="amount" name="amount" style="width:5em" />
+    <input type="text" ng-model="unit" name="unit" style="width:5em" />
+    <input type="text" ng-model="name" name="name" style="width:20em" />
+    <input type="submit" value="Add" />
+  </form>
+</div>
+<div class="row">
+  <ul ng-repeat="ingredient in recipe.ingredients">
+    <li>{{ingredient.amount}} {{ingredient.unit}} <b>{{ingredient.name}}</b></li>
+  </ul>
+</div>
