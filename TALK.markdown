@@ -80,4 +80,8 @@ Example: takeliberties.js@constant
 
 ### One more demo, laughs all around ###
 
+### All done ###
+
+My links + more resources.
+
 ### Q&A ###
