@@ -77,3 +77,7 @@ Basically the same as `value`, but is available during the configuration stage a
 The value of most services *is not* available during config.
 
 Example: takeliberties.js@constant
+
+### One more demo, laughs all around ###
+
+### Q&A ###
